@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro'; // Här importerar vi din nya footer!
 ---
 
 <html lang="sv">
@@ -9,12 +10,16 @@ import Navbar from '../components/Navbar.astro';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SamTech AB</title>
   </head>
-  <body class="bg-white text-sam-blue font-sans selection:bg-sam-cyan selection:text-white">
+  
+  <body class="bg-white text-sam-blue font-sans selection:bg-sam-cyan selection:text-white flex flex-col min-h-screen">
     
     <Navbar />
 
-    <main>
-      <slot /> </main>
+    <main class="flex-grow">
+      <slot /> 
+    </main>
+
+    <Footer />
 
   </body>
 </html>
