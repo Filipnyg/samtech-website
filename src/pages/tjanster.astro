@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- Sidans Header -->
+  <header class="bg-sam-blue text-white py-20 px-4 text-center">
+    <div class="max-w-4xl mx-auto mt-10">
+      <h1 class="text-5xl font-bold mb-6 tracking-tight">Våra <span class="text-sam-cyan">Tjänster</span></h1>
+      <p class="text-xl text-gray-300 font-medium">
+        Från avancerad programmering till kompletta mötesytor och stora event. Vi tar fullt ansvar för att er teknik fungerar felfritt.
+      </p>
+    </div>
+  </header>
+
+  <!-- Huvudinnehåll -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-40">
+    
+    <!-- 1. Mötesytor -->
+    <section id="motesytor" class="scroll-mt-32 grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="text-4xl font-bold text-sam-blue mb-6">Mötesytor</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Vi designar och installerar toppmoderna lösningar för konferensrum, hörsalar och townhalls. Oavsett rumsstorlek säkerställer vi kristallklart ljud och bild som är intuitivt för alla att använda.
+        </p>
+      </div>
+      <div class="relative group overflow-hidden rounded-3xl shadow-xl aspect-video">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80" alt="Mötesytor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+      </div>
+    </section>
+
+    <!-- 2. Event (Ny bildlänk) -->
+    <section id="event" class="scroll-mt-32 grid md:grid-cols-2 gap-16 items-center flex-col-reverse md:flex-row-reverse">
+      <div class="md:col-start-2">
+        <h2 class="text-4xl font-bold text-sam-blue mb-6">Event</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          För större anordningar agerar vi erfarna roddare, montörer och installatörer. Oavsett om det gäller tunga mässor eller stora konserter, har vi musklerna och kunskapen att bygga säkert och snabbt.
+        </p>
+      </div>
+      <div class="relative group overflow-hidden rounded-3xl shadow-xl aspect-video md:col-start-1 md:row-start-1">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80" alt="Event och Konsert" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+      </div>
+    </section>
+
+    <!-- 3. Projektledning -->
+    <section id="projektledning" class="scroll-mt-32 grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="text-4xl font-bold text-sam-blue mb-6">Projektledning</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Släpp kontrollen och lita på slutresultatet. Vi erbjuder total koordination och kundkontakt som projektledare, både i våra egna projekt och som betrodda underentreprenörer. Vi håller tidsplaner och budgetar.
+        </p>
+      </div>
+      <div class="relative group overflow-hidden rounded-3xl shadow-xl aspect-video">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80" alt="Projektledning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+      </div>
+    </section>
+
+    <!-- 4. Programmering (Logotyper inlagda) -->
+    <section id="programmering" class="scroll-mt-32 grid md:grid-cols-2 gap-16 items-center flex-col-reverse md:flex-row-reverse">
+      <div class="md:col-start-2">
+        <h2 class="text-4xl font-bold text-sam-blue mb-6">Programmering</h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          Vår starka spetskompetens. Vi har djupgående expertis inom AV-programmering och integrerar branschens ledande system för att ge er total och enkel kontroll över er teknik.
+        </p>
+        
+        <!-- Showcase för varumärken -->
+        <div class="pt-6 border-t border-gray-100">
+          <p class="text-sm font-semibold text-sam-cyan uppercase tracking-wider mb-4">Integrerade system & partners</p>
+          <div class="flex flex-wrap gap-4">
+            
+            <!-- Logotyp-boxar. Klasserna h-12 och object-contain ser till att alla loggor blir lika höga oavsett format -->
+            <div class="h-12 px-4 bg-white rounded-lg border border-gray-200 shadow-sm flex items-center justify-center hover:border-sam-cyan transition-colors">
+              <img src="https://placehold.co/100x40/ffffff/141b2d?text=Crestron" alt="Crestron" class="h-6 w-auto object-contain" />
+            </div>
+            
+            <div class="h-12 px-4 bg-white rounded-lg border border-gray-200 shadow-sm flex items-center justify-center hover:border-sam-cyan transition-colors">
+              <img src="https://placehold.co/100x40/ffffff/141b2d?text=Q-SYS" alt="Q-SYS" class="h-6 w-auto object-contain" />
+            </div>
+            
+            <div class="h-12 px-4 bg-white rounded-lg border border-gray-200 shadow-sm flex items-center justify-center hover:border-sam-cyan transition-colors">
+              <img src="https://placehold.co/100x40/ffffff/141b2d?text=Extron" alt="Extron" class="h-6 w-auto object-contain" />
+            </div>
+            
+            <div class="h-12 px-4 bg-white rounded-lg border border-gray-200 shadow-sm flex items-center justify-center hover:border-sam-cyan transition-colors">
+              <img src="https://placehold.co/100x40/ffffff/141b2d?text=Shure" alt="Shure" class="h-6 w-auto object-contain" />
+            </div>
+            
+            <div class="h-12 px-4 bg-white rounded-lg border border-gray-200 shadow-sm flex items-center justify-center hover:border-sam-cyan transition-colors">
+              <img src="https://placehold.co/100x40/ffffff/141b2d?text=Sennheiser" alt="Sennheiser" class="h-6 w-auto object-contain" />
+            </div>
+            
+            <div class="h-12 px-4 bg-white rounded-lg border border-gray-200 shadow-sm flex items-center justify-center hover:border-sam-cyan transition-colors">
+              <img src="https://placehold.co/100x40/ffffff/141b2d?text=Sony" alt="Sony" class="h-6 w-auto object-contain" />
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="relative group overflow-hidden rounded-3xl shadow-xl aspect-video md:col-start-1 md:row-start-1">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80" alt="Programmering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+      </div>
+    </section>
+
+    <!-- 5. Arbetsplatser -->
+    <section id="arbetsplatser" class="scroll-mt-32 grid md:grid-cols-2 gap-16 items-center pb-20">
+      <div>
+        <h2 class="text-4xl font-bold text-sam-blue mb-6">Arbetsplatser</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Ska ni flytta eller bygga ett helt nytt kontor? Vi hjälper er att från grunden bygga upp en modern och inspirerande kontorsmiljö utrustad med smarta arbetsplatser och digital signage-skärmar.
+        </p>
+      </div>
+      <div class="relative group overflow-hidden rounded-3xl shadow-xl aspect-video">
+        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1000&q=80" alt="Arbetsplatser" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+      </div>
+    </section>
+
+  </div>
+</Layout>
