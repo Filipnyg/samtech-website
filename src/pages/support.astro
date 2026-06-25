@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- Sidans Header -->
+  <header class="bg-sam-blue text-white py-20 px-4 text-center">
+    <div class="max-w-4xl mx-auto mt-10">
+      <h1 class="text-5xl font-bold mb-6 tracking-tight">Teknisk <span class="text-sam-cyan">Support</span></h1>
+      <p class="text-xl text-gray-300 font-medium">
+        Vi finns här när du behöver oss. Hitta snabba svar eller få personlig hjälp av våra tekniker.
+      </p>
+    </div>
+  </header>
+
+  <!-- Huvudinnehåll -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-24">
+    
+    <!-- Action Cards för Supportvägar -->
+    <div class="grid md:grid-cols-2 gap-10">
+      
+      <!-- Kort 1: Felanmälan -->
+      <div class="bg-white p-10 md:p-12 rounded-3xl shadow-lg border border-gray-100 hover:border-sam-cyan hover:shadow-xl transition-all group">
+        <div class="bg-sam-cyan/10 w-20 h-20 rounded-2xl flex items-center justify-center mb-8 text-sam-cyan group-hover:scale-110 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold text-sam-blue mb-4">Skapa Felanmälan</h2>
+        <p class="text-gray-600 mb-8 leading-relaxed">
+          Har du stött på ett tekniskt problem i er anläggning? Skicka in ett ärende så tar en av våra tekniker tag i det så snabbt som möjligt.
+        </p>
+        <!-- Notera: Denna länk öppnar kundens mejlklient med en förskriven ämnesrad -->
+        <a href="mailto:support@sam-tech.se?subject=Felanmälan:%20[Företagsnamn]" class="inline-block bg-sam-blue text-white font-bold py-4 px-8 rounded-full hover:bg-sam-cyan transition-colors shadow-md">
+          Mejla Supporten
+        </a>
+      </div>
+
+      <!-- Kort 2: Fjärrsupport -->
+      <div class="bg-white p-10 md:p-12 rounded-3xl shadow-lg border border-gray-100 hover:border-sam-cyan hover:shadow-xl transition-all group">
+        <div class="bg-sam-cyan/10 w-20 h-20 rounded-2xl flex items-center justify-center mb-8 text-sam-cyan group-hover:scale-110 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold text-sam-blue mb-4">Fjärrsupport</h2>
+        <p class="text-gray-600 mb-8 leading-relaxed">
+          Ibland är den snabbaste lösningen att vi kikar på problemet tillsammans på distans. Här kommer du framöver att kunna ladda ner vår supportklient.
+        </p>
+        <button class="inline-block bg-gray-100 text-gray-400 font-bold py-4 px-8 rounded-full cursor-not-allowed">
+          Ladda ner klient (Kommer snart)
+        </button>
+      </div>
+
+    </div>
+
+    <!-- FAQ (Vanliga frågor) -->
+    <div class="max-w-3xl mx-auto bg-gray-50 rounded-3xl p-10 md:p-16 border border-gray-100 shadow-inner">
+      <h2 class="text-3xl font-bold text-sam-blue mb-10 text-center">Vanliga frågor</h2>
+      
+      <div class="space-y-6">
+        
+        <!-- Fråga 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+          <h3 class="text-xl font-bold text-sam-blue mb-3">Vad har ni för inställelsetid på serviceavtal?</h3>
+          <p class="text-gray-600">
+            För kunder med aktivt serviceavtal (SLA) anpassar vi inställelsetiden helt efter era behov och den kritiska nivån på utrustningen. Kontakta er projektledare för detaljer kring ert specifika avtal.
+          </p>
+        </div>
+        
+        <!-- Fråga 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+          <h3 class="text-xl font-bold text-sam-blue mb-3">Skärmen i mötesrummet är svart, vad gör jag?</h3>
+          <p class="text-gray-600">
+            Börja alltid med att kontrollera att styrsystemet/panelen är vaken och att inga kablar har blivit urdragna ur bordets brunn. Kvarstår problemet, skicka in en felanmälan och ange rumsnamnet tydligt i mejlet.
+          </p>
+        </div>
+
+        <!-- Fråga 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+          <h3 class="text-xl font-bold text-sam-blue mb-3">Tar ni emot serviceärenden från anläggningar ni inte byggt?</h3>
+          <p class="text-gray-600">
+            Självklart. Med vår djupa expertis inom de flesta styrsystem på marknaden kan vi felsöka, reparera och omprogrammera anläggningar som andra leverantörer har installerat.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</Layout>
