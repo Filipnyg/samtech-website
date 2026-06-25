@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sam-blue: #141b2d;
+  --color-sam-cyan: #00cfff;
+}

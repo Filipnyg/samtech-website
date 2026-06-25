@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="relative flex flex-col items-center justify-center min-h-[calc(100vh-6rem)] overflow-hidden">
+    
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline 
+      class="absolute inset-0 w-full h-full object-cover -z-20"
+    >
+      <source src="/videos/hero-bg.mp4" type="video/mp4" />
+    </video>
+
+    <div class="absolute inset-0 bg-white/60 -z-10"></div>
+
+    <div class="relative z-10 text-center max-w-4xl mx-4 px-4">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-sam-blue tracking-tight">
+        Välkommen till <span class="text-sam-cyan">SamTech AB</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-sam-blue font-medium max-w-2xl mx-auto drop-shadow-sm">
+        Premium AV & Konferenslösningar för moderna arbetsplatser.
+      </p>
+      
+      <div class="mt-10">
+        <a href="/tjanster" class="inline-block bg-sam-blue text-white font-semibold px-8 py-4 rounded-full hover:bg-sam-cyan transition-colors duration-300 shadow-lg">
+          Utforska våra tjänster
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

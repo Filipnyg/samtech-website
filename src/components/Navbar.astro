@@ -1,0 +1,87 @@
+---
+// Navbar.astro
+---
+<nav class="bg-white border-b border-gray-100 text-sam-blue sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-24">
+      
+      <div class="flex-shrink-0 flex items-center">
+        <a href="/" class="text-3xl font-bold tracking-tight hover:text-sam-cyan transition-colors">
+          SamTech <span class="text-sam-cyan">AB</span>
+        </a>
+      </div>
+
+      <div class="flex md:hidden">
+        <button id="mobile-menu-button" type="button" class="text-sam-blue hover:text-sam-cyan focus:outline-none p-2" aria-label="Öppna meny">
+          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="hidden md:flex space-x-12">
+        
+        <div class="relative group">
+          <a href="/tjanster" class="inline-flex items-center font-medium hover:text-sam-cyan py-10 transition-colors">
+            Tjänster
+          </a>
+          <div class="absolute left-0 mt-0 w-56 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100">
+            <a href="/tjanster#motesytor" class="block px-5 py-3 hover:bg-gray-50 hover:text-sam-cyan">Mötesytor</a>
+            <a href="/tjanster#event" class="block px-5 py-3 hover:bg-gray-50 hover:text-sam-cyan">Event</a>
+            <a href="/tjanster#projektledning" class="block px-5 py-3 hover:bg-gray-50 hover:text-sam-cyan">Projektledning</a>
+            <a href="/tjanster#programmering" class="block px-5 py-3 hover:bg-gray-50 hover:text-sam-cyan">Programmering</a>
+            <a href="/tjanster#arbetsplatser" class="block px-5 py-3 hover:bg-gray-50 hover:text-sam-cyan">Arbetsplatser</a>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <a href="/om-oss" class="inline-flex items-center font-medium hover:text-sam-cyan py-10 transition-colors">
+            Om oss
+          </a>
+          <div class="absolute left-0 mt-0 w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100">
+            <a href="/om-oss#historia" class="block px-5 py-3 hover:bg-gray-50 hover:text-sam-cyan">Historia</a>
+            <a href="/om-oss#erfarenhet" class="block px-5 py-3 hover:bg-gray-50 hover:text-sam-cyan">Erfarenhet</a>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <a href="/kontakta-oss" class="inline-flex items-center font-medium hover:text-sam-cyan py-10 transition-colors">
+            Kontakta oss
+          </a>
+          <div class="absolute left-0 mt-0 w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100">
+            <a href="/kontakta-oss#kontakt" class="block px-5 py-3 hover:bg-gray-50 hover:text-sam-cyan">Kontakt</a>
+            <a href="/kontakta-oss#karriar" class="block px-5 py-3 hover:bg-gray-50 hover:text-sam-cyan">Karriär</a>
+          </div>
+        </div>
+
+        <a href="/support" class="inline-flex items-center font-medium hover:text-sam-cyan py-10 transition-colors">
+          Support
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+    <div class="px-4 pt-2 pb-4 space-y-1">
+      <a href="/tjanster" class="block px-3 py-3 rounded-md text-base font-medium hover:text-sam-cyan hover:bg-gray-50">Tjänster</a>
+      <a href="/om-oss" class="block px-3 py-3 rounded-md text-base font-medium hover:text-sam-cyan hover:bg-gray-50">Om oss</a>
+      <a href="/kontakta-oss" class="block px-3 py-3 rounded-md text-base font-medium hover:text-sam-cyan hover:bg-gray-50">Kontakta oss</a>
+      <a href="/support" class="block px-3 py-3 rounded-md text-base font-medium hover:text-sam-cyan hover:bg-gray-50">Support</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Det här skriptet körs automatiskt av Astro på klienten (i webbläsaren)
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  // Vi kollar så att knappen och menyn faktiskt finns på sidan
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      // Toggle lägger till klassen 'hidden' om den saknas, och tar bort den om den finns
+      menu.classList.toggle('hidden');
+    });
+  }
+</script>
