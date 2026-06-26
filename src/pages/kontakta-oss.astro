@@ -1,19 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-/* 
-=============================================================================
+/* =============================================================================
   INSTRUKTIONER FÖR EGNA PROFILBILDER:
-  1. Det finns en mapp som heter "team" inuti mappen "public" (public/team).
+  1. Skapa en ny mapp som heter "team" inuti mappen "public" (public/team).
   2. Lägg era profilbilder där.
   3. Format: Använd .webp eller .jpg (för snabbast laddningstid).
   4. Proportioner: Layouten klipper bilderna till en perfekt kvadrat (1:1). 
      För bäst resultat, använd kvadratiska bilder (t.ex. 800x800 pixlar) 
      så att personens ansikte är centrerat och inte hamnar utanför kanten.
-  5. Sökväg: Byt ut länken vid "img:" nedan mot er filväg, 
+  5. Sökväg: Byt ut variabeln 'defaultAvatar' vid "img:" nedan mot er filväg, 
      t.ex. img: "/team/samir.jpg"
 =============================================================================
 */
+
+// Standardbild (Generisk grå silhuett)
+const defaultAvatar = "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y&s=800";
 
 const team = [
   {
@@ -22,7 +24,7 @@ const team = [
     email: "Samir@sam-tech.se",
     phone: "070-945 44 83",
     phoneLink: "0709454483",
-    img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" // Byt till t.ex. "/team/samir.webp" när bilden finns
+    img: defaultAvatar
   },
   {
     name: "Jarmo Mäki",
@@ -30,7 +32,7 @@ const team = [
     email: "Jarmo@sam-tech.se",
     phone: "070-945 44 89",
     phoneLink: "0709454489",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800&q=80"
+    img: defaultAvatar
   },
   {
     name: "Filip Nygren",
@@ -38,47 +40,46 @@ const team = [
     email: "Filip@sam-tech.se",
     phone: "070-945 44 56",
     phoneLink: "0709454456",
-    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80"
+    img: defaultAvatar
   },
   // 5 Tekniker
   {
     name: "[Namn Efternamn]", role: "Tekniker", email: "namn@sam-tech.se", phone: "070-000 00 00", phoneLink: "0700000000",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+    img: defaultAvatar
   },
   {
     name: "[Namn Efternamn]", role: "Tekniker", email: "namn@sam-tech.se", phone: "070-000 00 00", phoneLink: "0700000000",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+    img: defaultAvatar
   },
   {
     name: "[Namn Efternamn]", role: "Tekniker", email: "namn@sam-tech.se", phone: "070-000 00 00", phoneLink: "0700000000",
-    img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80"
+    img: defaultAvatar
   },
   {
     name: "[Namn Efternamn]", role: "Tekniker", email: "namn@sam-tech.se", phone: "070-000 00 00", phoneLink: "0700000000",
-    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+    img: defaultAvatar
   },
   {
     name: "[Namn Efternamn]", role: "Tekniker", email: "namn@sam-tech.se", phone: "070-000 00 00", phoneLink: "0700000000",
-    img: "https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=800&q=80"
+    img: defaultAvatar
   },
   // 3 Obestämda roller
   {
     name: "[Namn Efternamn]", role: "[Roll / Titel]", email: "namn@sam-tech.se", phone: "070-000 00 00", phoneLink: "0700000000",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80"
+    img: defaultAvatar
   },
   {
     name: "[Namn Efternamn]", role: "[Roll / Titel]", email: "namn@sam-tech.se", phone: "070-000 00 00", phoneLink: "0700000000",
-    img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
+    img: defaultAvatar
   },
   {
     name: "[Namn Efternamn]", role: "[Roll / Titel]", email: "namn@sam-tech.se", phone: "070-000 00 00", phoneLink: "0700000000",
-    img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80"
+    img: defaultAvatar
   }
 ];
 ---
 
 <Layout>
-  <!-- Sidans Header -->
   <header class="bg-sam-blue text-white py-20 px-4 text-center">
     <div class="max-w-4xl mx-auto mt-10">
       <h1 class="text-5xl font-bold mb-6 tracking-tight">Kontakta <span class="text-sam-cyan">Oss</span></h1>
@@ -88,25 +89,20 @@ const team = [
     </div>
   </header>
 
-  <!-- Huvudinnehåll -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
     
-    <!-- Allmän kontakt -->
     <div class="text-center mb-16 pb-12 border-b border-gray-200 max-w-2xl mx-auto">
       <p class="text-lg text-gray-600 mb-2">För allmänna frågor eller offertförfrågningar:</p>
       <a href="mailto:info@sam-tech.se" class="text-3xl font-bold text-sam-blue hover:text-sam-cyan transition-colors">info@sam-tech.se</a>
     </div>
 
-    <!-- Team Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
       
       {team.map((person) => (
         <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group">
-          <!-- Profilbild -->
           <div class="aspect-square overflow-hidden relative bg-gray-100">
-            <img src={person.img} alt={person.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img src={person.img} alt={person.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" />
           </div>
-          <!-- Information -->
           <div class="p-6 text-center flex flex-col justify-between h-[200px]">
             <div>
               <h3 class="text-xl font-bold text-sam-blue mb-1">{person.name}</h3>
