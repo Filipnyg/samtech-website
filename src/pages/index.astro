@@ -15,12 +15,15 @@ import Layout from '../layouts/Layout.astro';
       <source src="/videos/hero-bg.mp4" type="video/mp4" />
     </video>
 
-    <div class="absolute inset-0 bg-white/60 -z-10"></div>
+    <div class="absolute inset-0 bg-white/50 -z-10"></div>
 
     <div class="relative z-10 text-center max-w-4xl mx-4 px-4">
-      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-sam-blue tracking-tight">
-        Välkommen till <span class="text-sam-cyan">SamTech AB</span>
+      
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-sam-blue tracking-tight flex flex-col items-center gap-6">
+        <span class="block">Välkommen till</span>
+        <img src="/logo-main.svg" alt="SamTech AB" class="h-20 md:h-28 lg:h-32 w-auto object-contain drop-shadow-sm" />
       </h1>
+      
       <p class="text-xl md:text-2xl text-sam-blue font-medium max-w-2xl mx-auto drop-shadow-sm">
         Premium AV & Konferenslösningar för moderna arbetsplatser.
       </p>
@@ -30,6 +33,7 @@ import Layout from '../layouts/Layout.astro';
           Utforska våra tjänster
         </a>
       </div>
+      
     </div>
   </section>
 </Layout>
